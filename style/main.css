@@ -3,7 +3,7 @@
 ======================*/
 
 body{
-    background-color:	hsl(271, 29%, 70%);
+    background-color: 	hsl(48, 90%, 60%);
     display:flex; 
     flex-direction:column;    
     margin: 1em auto;
@@ -14,7 +14,7 @@ body{
 header{
     display: flex;
     height: 10vh;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 main{
@@ -40,7 +40,7 @@ footer{
 ======================*/
 
 h1, h2, h3, h4, h5, h6, a, p{
-    color: hsl(0, 0%, 100%);
+    color: 	hsl(219, 14%, 25%);
 }
 
 h1, h2, h3, h4 {
@@ -59,6 +59,7 @@ h1 {
     font-size: 2.5em;
     font-weight: 600;
     text-decoration: none;
+    color: hsl(0, 0%, 100%);
 }
 
 h2 {
@@ -100,6 +101,8 @@ img {
 ======================*/
 
 .logo{
+    display: flex;
+    flex-direction: row nowrap;
     width: max-content;
 }
 
@@ -121,11 +124,28 @@ img {
 }
 
 .title h1{
+
     font-family: 'Dancing Script';
     font-weight: 400;
     text-align: left;
 }
 
+.menu-icon
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+}
+
+.menu-icon__element
+{
+    width: 30px;
+    height: 2px;
+    background-color: hsl(0, 0%, 0%);
+    margin-bottom: 0.3em;
+}
 /*====================
 ========Subtitle======
 ======================*/
@@ -133,8 +153,7 @@ img {
 .subtitle{
     border-left: 5px #fff solid;
     border-right: 5px #fff solid;
-    padding: 0.5rem 0;
-    margin-bottom: 3rem;
+    margin-bottom: 5em;
     width: 100%;
 }
 
@@ -156,18 +175,41 @@ img {
     min-width: 45%;
     max-width: 45%;
 }
-
-.crud__table-grid, .crud__table-flex{
-    margin-bottom: 1em;
+.crud__table
+{
+    display: flex;
+    justify-content: center;
+}
+.crud__table table
+{
+    width:100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+    font-family: 'Ubuntu';
+    color:hsl(219, 14%, 25%);
+}
+.crud__table table th
+{
+    background-color:hsl(0, 0%, 100%);
+}
+.crud__table table th td
+{
+    font-size: 0.5rem;
+}
+.crud__table table,th,td
+{
+    border: 0.2em solid hsl(0, 0%, 100%);
+}
+.crud__table table th,td
+{
     width: 100%;
+    max-width: 100%;
+    padding: 1em;
 }
-
-.crud__table-grid{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: 0.5em;
+.crud__table table td
+{
+    text-align: center;
 }
-
 .crud__table-grid-element{
     width: 100%;
 }
@@ -197,7 +239,7 @@ img {
 }
 
 .crud__form-label label{
-    color: hsl(0, 0%, 100%);
+    color: 	hsl(219, 14%, 25%);
 	font-family: "Ubuntu";
 	font-weight: 600;
 	font-size: 1em;
@@ -216,13 +258,14 @@ img {
 .crud__form-input textarea,
 .crud__form-input select {
     background-color: hsl(0, 0%, 100%);
-	border: none;
+    border: none;
+    border-radius: 0.2rem;
 	border-bottom: 1px solid hsl(0, 0%, 73%);
 	box-sizing: border-box;
-    color: hsl(0, 0%, 0%);
+    color: 	hsl(219, 14%, 25%);
 	font-family: "Ubuntu";
 	font-weight: 600;
-	padding: 0.2em 0.5em;
+	padding: 0.5em 0.5em;
 	width: 100%;
 }
 
@@ -235,11 +278,11 @@ img {
 }
 
 .crud__store-button{
-	background-image: linear-gradient(to right, #253786 0%, #02A8B0 50%, #253786 100%);
+	background-image: linear-gradient(to right, #b39cc9 0%, #ffffff 50%, #b39cc9 100%);
     background-size: 200% auto;
     border-radius: 1em;
     border: none;
-    color: white;
+    color:hsl(219, 14%, 25%);
     cursor: pointer;
     font-size: 1.2em;
 	font-weight: 600;
@@ -266,6 +309,12 @@ img {
 
 .footer-element p{
     text-align: center;
+}
+
+.author a p:hover
+{
+   color: hsl(0, 0%, 0%);
+   transition: 1s ease;
 }
 
 @media (max-width:479px) {
@@ -326,8 +375,13 @@ img {
 
     header{
         height: 2vh;
+        margin-bottom: 2em;
     }
 
+    .crud__table table
+    {
+       margin: 5em 0;
+    }
     .main-element{
         margin: 1.5em 0;
     }
@@ -345,8 +399,8 @@ img {
     }
 
     .logo svg{
-        height: 2em;
-        width: 2em;
+        height: 3.5em;
+        width: 3.5em;
     }
 
     .title{
