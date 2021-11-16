@@ -209,6 +209,9 @@ img {
 .crud__table table td
 {
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .crud__table-grid-element{
     width: 100%;
