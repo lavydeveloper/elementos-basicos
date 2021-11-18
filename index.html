@@ -60,34 +60,89 @@
                         </table>
                       </div>
                 </div>
-    
+                            
                 <div class="crud__form">
                     <form class="crud__admin-form" id="crud__user-form" action="/users/create" autocomplete="off"> 
                         <div class="crud__form-element">
-                            <div class="crud__form-label">
-                                <label for="name">Nombre</label>
+                            <div class="crud__form-inputs columns-4">
+                                <div>
+                                    <label>Nombre</label>
+                                    <input type="text" name="name">
+                                </div>
+                                <div>
+                                    <label>Apellido</label>
+                                    <input type="text" name="surname">
+                                </div>
+                                <div>
+                                    <label>Teléfono</label>
+                                    <input type="tel" name="phonenumber">
+                                </div>
+                                <div>
+                                    <label>E-mail</label>
+                                    <input type="email" name="email">
+                                </div>
                             </div>
-
-                            <div class="crud__form-input">
-                                <input type="text" name="name">
+                            <div class="crud__form-inputs columns-3">
+                                <div>
+                                    <label>Contraseña</label>
+                                    <input type="password" name="password">
+                                </div>
+                                <div>
+                                    <label>Elige una opción</label>
+                                    <select name="opciones" id="">
+                                        <option value="0">Opción 1</option>
+                                        <option value="1">Opción 2</option>
+                                        <option value="2">Opción 3</option>
+                                        <option value="3">Opción 4</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label>Fecha</label>
+                                    <input type="date" name="date">
+                                </div>
+                            </div>
+                            <div class="crud__form-inputs row">
+                                <div class="row column-3">
+                                    <div>
+                                        <input type="radio" name="">
+                                        <label>Front-End</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="">
+                                        <label>Backend</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="">
+                                        <label>Fullstack</label>
+                                    </div>
+                                </div>
+                                <div class="row column-3">
+                                    <div>
+                                        <input type="checkbox" name="">
+                                        <label>Opción 1</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="">
+                                        <label>Opción 2</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="">
+                                        <label>Opción 3</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="crud__form-inputs column">
+                                <div>
+                                    <textarea name="" id=""></textarea>
+                                </div>
                             </div>
                         </div>
-                        <div class="crud__form-element">
-                            <div class="crud__form-label">
-                                <label for="surname">Apellidos</label>
-                            </div>
-
-                            <div class="crud__form-input">
-                                <input type="text" name="surname">
-                            </div>
-                        </div>
-
                         <div class="crud__form-element">
                             <button class="crud__store-button">Guardar</button>
                         </div>
                     </form>
                 </div>
-            </div> 
+            </div>
         </main>
 
         <footer>
