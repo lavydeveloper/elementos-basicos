@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="images/favicon-16x16.png">
 
-		<title>HTML, CSS y Javascript</title>
+		<title>Panel de control</title>
 		<meta name="description" content="Un breve repaso sobre los elementos básicos del desarrollo web: HTML, CSS y Javascript.">
         <meta name="keywords" 	 content="palabras clave, separadas, por comas">
 
@@ -45,7 +45,7 @@
 
             <div class="main-element crud">
                 <div class="crud__table">
-                    <div class="crud__table__element">
+                    <div class="crud__table-element">
                         <table>
                             <tr>
                                 <th>ID</th>
@@ -63,77 +63,133 @@
                             
                 <div class="crud__form">
                     <form class="crud__admin-form" id="crud__user-form" action="/users/create" autocomplete="off"> 
-                        <div class="crud__form-element">
+                        <div>
                             <div class="crud__form-inputs columns-4">
-                                <div>
-                                    <label>Nombre</label>
-                                    <input type="text" name="name">
+                                <div class="crud__form-element">
+                                    <div class="crud__form-label">
+                                        <label>Nombre</label>
+                                    </div>
+                                    <div class="crud__form-input">
+                                        <input type="text" name="name">
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Apellido</label>
-                                    <input type="text" name="surname">
+                                <div class="crud__form-element">
+                                    <div class="crud__form-label">
+                                        <label>Apellido</label>
+                                    </div>
+                                    <div class="crud__form-input">
+                                        <input type="text" name="surname">
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Teléfono</label>
-                                    <input type="tel" name="phonenumber">
+                                <div class="crud__form-element">
+                                    <div class="crud__form-label">
+                                        <label>Teléfono</label>
+                                    </div>
+                                    <div class="crud__form-input">
+                                        <input type="tel" name="phonenumber">
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>E-mail</label>
-                                    <input type="email" name="email">
+                                <div class="crud__form-element">
+                                    <div class="crud__form-label">
+                                        <label>E-mail</label>
+                                    </div> 
+                                    <div class="crud__form-input">
+                                        <input type="email" name="email">
+                                    </div>
                                 </div>
                             </div>
                             <div class="crud__form-inputs columns-3">
-                                <div>
-                                    <label>Contraseña</label>
-                                    <input type="password" name="password">
+                                <div class="crud__form-element">
+                                    <div>
+                                        <label>Contraseña</label>
+                                    </div>
+                                    <div>
+                                        <input type="password" name="password">
+                                    </div>
                                 </div>
                                 <div>
-                                    <label>Elige una opción</label>
-                                    <select name="opciones" id="">
-                                        <option value="0">Opción 1</option>
-                                        <option value="1">Opción 2</option>
-                                        <option value="2">Opción 3</option>
-                                        <option value="3">Opción 4</option>
-                                    </select>
+                                    <div>
+                                        <label>Elige una opción</label>
+                                    </div>
+                                    <div>
+                                        <select name="opciones" id="">
+                                            <option value="0" selected>--</option>
+                                            <option value="1">Servidores</option>
+                                            <option value="2">Animaciones</option>
+                                            <option value="3">Maquetación</option>
+                                            <option value="4">Ninguna</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Fecha</label>
-                                    <input type="date" name="date">
+                                <div class="crud__form-element">
+                                    <div>
+                                        <label>Fecha</label>
+                                    </div>
+                                    <div>
+                                        <input type="date" name="date">
+                                    </div>
                                 </div>
                             </div>
                             <div class="crud__form-inputs row">
-                                <div class="row column-3">
-                                    <div>
-                                        <input type="radio" name="">
-                                        <label>Front-End</label>
+                                <div class="row">
+                                    <div class="crud__form-inputs__element row">
+                                        <div class="crud__form-inputs__input">
+                                            <input type="radio" name="">
+                                        </div>
+                                        <div class="crud__form-inputs__label">
+                                            <label>Front-End</label>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input type="radio" name="">
-                                        <label>Backend</label>
+                                    <div class="crud__form-inputs__element row">
+                                        <div class="crud__form-inputs__input">
+                                            <input type="radio" name="">
+                                        </div>
+                                        <div class="crud__form-inputs__label">
+                                            <label>Backend</label>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input type="radio" name="">
-                                        <label>Fullstack</label>
+                                    <div class="crud__form-inputs__element row">
+                                        <div class="crud__form-inputs__input">
+                                            <input type="radio" name="">
+                                        </div>
+                                        <div class="crud__form-inputs__label">
+                                            <label>Fullstack</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row column-3">
-                                    <div>
-                                        <input type="checkbox" name="">
-                                        <label>Opción 1</label>
+                                <div class="row">
+                                    <div class="crud__form-inputs__element row">
+                                        <div class="crud__form-inputs__input">
+                                            <input type="checkbox" name="">
+                                        </div>
+                                        <div class="crud__form-inputs__label">
+                                            <label>Front-End</label>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input type="checkbox" name="">
-                                        <label>Opción 2</label>
+                                    <div class="crud__form-inputs__element row">
+                                        <div class="crud__form-inputs__input">
+                                            <input type="checkbox" name="">
+                                        </div>
+                                        <div class="crud__form-inputs__label">
+                                            <label>Backend</label>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <input type="checkbox" name="">
-                                        <label>Opción 3</label>
+                                    <div class="crud__form-inputs__element row">
+                                        <div class="crud__form-inputs__input">
+                                            <input type="checkbox" name="">
+                                        </div>
+                                        <div class="crud__form-inputs__label">
+                                            <label>Fullstack</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="crud__form-inputs column">
-                                <div>
-                                    <textarea name="" id=""></textarea>
+                                <div class="crud__form-inputs__label">
+                                    <label for="">Sugerencias</label>
+                                </div>
+                                <div class="crud__form-inputs__input">
+                                    <textarea name="" id="" maxlength="300"></textarea>
                                 </div>
                             </div>
                         </div>
